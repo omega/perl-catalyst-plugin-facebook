@@ -5,8 +5,6 @@ use warnings;
 
 use WWW::Facebook::API;
 
-our $VERSION = '0.1';
-
 use Scalar::Util qw();
 
 # why not
@@ -83,10 +81,19 @@ WWW::Facebook::API module for all of the configuration options available.
 
 The two required configuration options are 'api_key' and 'secret'.
 
-=head1 EXPORT
+=head1 INTERFACE
 
-This package exports the facebook method. The facebook method returns a
-full WWW::Facebook::API object.
+=head2 METHODS
+
+=head3 facebook
+
+This method, which will be available on your Catalyst context object, will
+return the full L<WWW::Facebook::API> object.
+
+=head3 fb
+
+fb is just an alias for facebook.
+
 
 =head1 BUGS
 
